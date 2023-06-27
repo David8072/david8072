@@ -1,0 +1,249 @@
+1.Compare Two JSON:
+
+
+let obj1 = {"name":"Person1","Age":5};
+let obj2 = {"Age":5,"name":"Person1"};
+
+let flag=true;
+
+if(Object.keys(obj1).length==Object.keys(obj2).length){
+    for(key in obj1) { 
+        if(obj1[key] == obj2[key]) {
+            continue;
+        }
+        else {
+            flag=false;
+            break;
+        }
+    }
+}
+else {
+    flag=false;
+}
+console.log("is object equal"+flag)
+
+
+
+2.Country Flags:
+
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url, true);
+
+      //Set Headers (Optional)
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          //Request was successful
+          var response = JSON.parse(xhr.responseText);
+          //   console.log(response);
+          //   console.log("Converted obj:", response[0].name);
+          //   console.log("Converted obj:", response[0]);
+          for (var i = 0; i < response.length; i++) {
+            console.log(response[i].flag);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+
+3.Country names:
+
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url, true);
+
+      //Set Headers (Optional)
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          //Request was successful
+          var response = JSON.parse(xhr.responseText);
+          //   console.log(response);
+          //   console.log("Converted obj:", response[0].name);
+          //   console.log("Converted obj:", response[0]);
+          for (var i = 0; i < response.length; i++) {
+            console.log(response[i].name.common);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+
+
+4.Country Region:
+
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url, true);
+
+      //Set Headers (Optional)
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          //Request was successful
+          var response = JSON.parse(xhr.responseText);
+          //   console.log(response);
+          //   console.log("Converted obj:", response[0].name);
+          //   console.log("Converted obj:", response[0]);
+          for (var i = 0; i < response.length; i++) {
+            console.log(response[i].region);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+
+5.Country subregion:
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url, true);
+
+      //Set Headers (Optional)
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          //Request was successful
+          var response = JSON.parse(xhr.responseText);
+          //   console.log(response);
+          //   console.log("Converted obj:", response[0].name);
+          //   console.log("Converted obj:", response[0]);
+          for (var i = 0; i < response.length; i++) {
+            console.log(response[i].subregion);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+
+6.Country populations:
+
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url, true);
+
+      //Set Headers (Optional)
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          //Request was successful
+          var response = JSON.parse(xhr.responseText);
+          //   console.log(response);
+          //   console.log("Converted obj:", response[0].name);
+          //   console.log("Converted obj:", response[0]);
+          for (var i = 0; i < response.length; i++) {
+            console.log(response[i].populations);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
